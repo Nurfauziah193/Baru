@@ -1,0 +1,68 @@
+@startuml
+left to right direction
+actor "User" as User
+rectangle Aplication {
+  usecase "Daftar" as Daftar
+  usecase "Login" as Login
+  usecase "IsiPulsa" as IsiPulsa
+  usecase "IsiPaketData" as IsiPaketData
+  usecase "IsiTokenListrik" as IsiTokenListrik
+  usecase "IsiPulsaTransfer" as IsiPulsaTransfer
+  usecase "IsiPulsaTelephone" as IsiPulsaTelephone
+  usecase "IsiPaketSMS" as IsiPaketSMS
+  usecase "IsiSaldoGojek" as IsiSaldoGojek
+  usecase "IsiSaldoGrab" as IsiSaldoGrab
+  usecase "IsiSaldoEmoney" as IsiSaldoEmoney
+  usecase "IsiVoucerGame" as IsiVoucerGame
+  usecase "IsiTVKabel" as IsiTVKabel
+  usecase "IsiWIFIID" as IsiWIFIID
+  usecase "BayarBPJS" as BayarBPJS
+  usecase "BayarPDAM" as BayarPDAM
+  usecase "PLNPascaBayar" as PLNPascaBayar
+  usecase "MasaAktif" as MasaAktif
+  usecase "VoucerMakan" as VoucerMakan
+  usecase "TiketPesawat" as TiketPesawat
+User --> Daftar
+User --> Login
+User --> IsiPulsa
+User --> IsiPaketData
+User --> IsiTokenListrik
+User --> IsiPulsaTransfer
+User --> IsiPulsaTelephone
+User --> IsiPaketSMS
+User --> IsiSaldoGojek
+User --> IsiSaldoGrab
+User --> IsiSaldoEmoney
+User --> IsiVoucerGame
+User --> IsiTVKabel
+User --> IsiWIFIID
+User --> BayarBPJS
+User --> BayarPDAM
+User --> PLNPascaBayar
+User --> MasaAktif
+User --> VoucerMakan
+User --> TiketPesawat
+
+(Daftar).> (Isi Biodata Pendaftaran) : include
+(Isi Biodata Pendaftaran).> (Autentikasi Nomor) : include
+(Login).> (Isi Nomor & Password) : include
+(IsiPulsa).> (Plih Operator) : include
+(IsiPaketData).> (Plih Operator) : include
+(IsiTokenListrik).> (Plih ProdukPLN) : include
+(IsiPulsaTransfer).> (Plih Operator) : include
+(IsiPulsaTelephone).> (Plih Operator) : include
+(IsiPaketSMS).> (Plih Operator) : include
+(IsiSaldoGojek).> (Plih Kategori Saldo) : include
+(IsiSaldoGrab).> (Plih Kategori Saldo) : include
+(IsiSaldoEmoney).> (Plih Provider) : include
+(IsiVoucerGame).> (Plih Produk) : include
+(IsiTVKabel).> (Plih Provider) : include
+(IsiWIFIID).> (Plih Produk) : include
+(BayarBPJS).> (Bayar BPJS) : include
+(BayarPDAM).> (Kota Bayar) : include
+(PLNPascaBayar).> (Jenis Layanan) : include
+(MasaAktif).> (Pilih Operator) : include
+(VoucerMakan).> (Pilih Produk) : include
+
+}
+@enduml
